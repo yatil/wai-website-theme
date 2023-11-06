@@ -1,8 +1,8 @@
-{%- assign resource=site.documents | where: "ref", include.to | where: "lang", include.lang -%}
+{%- assign resource=site.documents | where: "ref", include.to | where: "lang", include.lang | first -%}
 {%- unless resource -%}
-  {%- assign resource=site.pages | where: "ref", include.to | where: "lang", include.lang -%}
+  {%- assign resource=site.pages | where: "ref", include.to | where: "lang", include.lang | first -%}
 {%- endunless -%}
 {%- if resource -%}
-{{resource.first.resource.title}}
+{{resource.title}}
 {%- endif -%}
 
