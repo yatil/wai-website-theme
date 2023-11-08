@@ -1,7 +1,7 @@
 {%- assign langs = site.data.lang -%}
 {%- assign vtt-metadata=site.data.[include.vtt-data-location].vtt | where: "name", include.vtt-name | first -%}
 <div class="video-container" data-video-type="" dir="ltr">
-    <video preload="metadata" data-youtube-id="{{include.yt-id}}" data-youtube-nocookie="true" data-description-audible="false" width="450">
+    <video preload="metadata" data-youtube-id="{{include.yt-id}}" data-youtube-nocookie="true" data-description-audible="false">
         {%- if vtt-metadata.captions -%}
         {%- for caption in vtt-metadata.captions -%}
         {%- if include.lang-folder -%}
@@ -24,7 +24,7 @@
 </div>
 {% if include.yt-id-ad %}
 <div class="video-container" data-video-type="audio-described">
-    <video preload="metadata" data-youtube-id="{{include.yt-id-ad}}" data-youtube-nocookie="true" data-description-audible="false" width="450">
+    <video preload="metadata" data-youtube-id="{{include.yt-id-ad}}" data-youtube-nocookie="true" data-description-audible="false">
         {%- if vtt-metadata.captions-ad -%}
         {%- for caption in vtt-metadata.captions-ad -%}
         {%- if include.lang-folder -%}
