@@ -57,9 +57,8 @@
 <p><button id="audio_description_button"><svg aria-hidden="true" class="icon-audio-description "><use xlink:href="{{ "/assets/images/icons.svg#icon-audio-description" | relative_url }}"></use></svg> <span>Enable Audio Description</span></button></p>
 {% endif %}
 
-<script src="{{ "/assets/ableplayer/thirdparty/modernizr.custom.js" | relative_url }}"></script>
-<script src="{{ "/assets/scripts/jquery.min.js" | relative_url }}"></script>
-<script src="{{ "/assets/ableplayer/thirdparty/js.cookie.js" | relative_url }}"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
 <script src="{{ "/assets/ableplayer/build/ableplayer.min.js" | relative_url }}"></script>
 <script>
     var youTubeDataAPIKey = "{{site.ytkey}}";
