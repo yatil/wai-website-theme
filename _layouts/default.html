@@ -145,7 +145,7 @@
       {%- endunless -%}{%- endif -%}
       {%- if page.collection == "posts" -%}
         <section class="meta">
-          <p><strong>Date:</strong> 1 February 2024</p>
+          <p><strong>Date:</strong> {{page.date | date: "-%d %B %Y"}</p>
         </section>
       {%- endif -%}
     </header>
